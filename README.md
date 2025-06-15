@@ -20,9 +20,20 @@ UI
 
 ![image](https://github.com/user-attachments/assets/b829925d-83e9-4a98-9a36-443ba8611a5c)
 
-# Edit Title
+# Edit Title name
 ![image](https://github.com/user-attachments/assets/ff227370-2c42-401f-b843-3addf5e0893d)
 
-# Product random data
+# Product random data to show
 ![image](https://github.com/user-attachments/assets/e063189c-ecc5-46f0-86a4-dd0209336d25)
 
+# Save settings to AWS Dynamodb
+![image](https://github.com/user-attachments/assets/e0028636-fe56-48fe-9351-ea291276564b)
+
+![image](https://github.com/user-attachments/assets/95b057f0-bde9-49dc-a14b-24f09449bc8d)
+
+# APIs
+Find best lists for show graph 
+![image](https://github.com/user-attachments/assets/944dafd4-a7f9-4575-b406-77204d979edc)
+
+Add setting to DB 
+![image](https://github.com/user-attachments/assets/c5c1a541-b14c-4f78-a4eb-9b178559a82a)
