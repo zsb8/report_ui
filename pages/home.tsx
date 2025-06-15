@@ -8,6 +8,15 @@ import { isAuthorized } from "@/util/user-util";
 import { Column, Line, Scatter } from '@ant-design/plots';
 import { query_graph_data, save_report_settings } from "@/util/aws-api";
 
+interface AWSResponse {
+  message: string;
+  result?: {
+    status: string;
+    id: string;
+    message: string;
+  };
+}
+
 const { Header, Content } = Layout;
 
 const DEFAULT_LOGO = "/logo-default.png";
@@ -32,6 +41,7 @@ export default function ReportDesigner() {
       y_candidates: string[];
     };
   }>({});
+  const [reportId, setReportId] = useState<string>("");
 
   // Upload Logo
   const handleLogoUpload = (info: any) => {
@@ -307,8 +317,9 @@ export default function ReportDesigner() {
       localStorage.setItem('report_settings', JSON.stringify(reportSettings));
 
       // Save to AWS
-      const result = await save_report_settings(reportSettings);
+      const result = await save_report_settings(reportSettings) as AWSResponse;
       if (result.message === "Success") {
+        setReportId(result.result?.id || "");
         message.success('Report settings saved successfully');
       } else {
         message.error('Failed to save report settings');
@@ -448,6 +459,11 @@ export default function ReportDesigner() {
               >
                 Save Report Settings to AWS
               </Button>
+              {reportId && (
+                <span style={{ marginLeft: 8, color: '#52c41a' }}>
+                  Report ID: {reportId}
+                </span>
+              )}
             </div>
           </div>
         )}
