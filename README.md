@@ -12,6 +12,8 @@ UI
 ![image](https://github.com/user-attachments/assets/23d663f6-65dd-4312-9ae0-04cf5a5c185c)
 
 # Show Graph
+After submitting the data, the chart will automatically select which columns are suitable for use as the X-axis and Y-axis based on your data content, thus avoiding wrong selection and failure to display the chart.     
+
 ![image](https://github.com/user-attachments/assets/f1fbdf69-963c-4e7b-b277-ef7402ce8d63)
 
 ![image](https://github.com/user-attachments/assets/b0744c62-e1f5-42ae-977a-d0d86767991f)
